@@ -4,7 +4,7 @@ import {home,users,calendar} from '../assets'
 
 export const Sidebar = () => {
   return (
-    <div className='md:flex bg-white w-full md:w-1/5 flex-col hidden sm:hidden w-100'>
+    <div className='md:flex bg-white w-full md:w-1/5 flex-col hidden sm:hidden h-auto'>
         <div className='flex flex-row items-center px-5 py-4 hover:bg-blue hover:text-white'>
             <img className='h-8' src={home} alt="home" />
             <h1 className='text-prime font-semibold ml-2'>Beranda</h1>

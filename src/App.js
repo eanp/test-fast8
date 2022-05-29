@@ -28,7 +28,7 @@ export default function App() {
 
   const showData = async(point = 1) => {
     let max = 4 * point
-    setTemp(data.results.slice(max-4,max))
+    data?.results &&  setTemp(await data.results.slice(max-4,max))
     setStatus(point)
   }
 
@@ -43,14 +43,12 @@ export default function App() {
   }
 
   return (
-    <div>
+    <>
     <Navbar />
-      <div className='flex flex-col w-full h-full md:flex-row md:h-full'>
-      
+      <div className='flex flex-col w-full md:flex-row bg-base'>
       <Sidebar />
-
       <Content temp={temp} prev={prev} next={next} status={status} long={long} />
       </div>
-    </div>
+    </>
   )
 }

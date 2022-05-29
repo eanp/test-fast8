@@ -4,7 +4,7 @@ import { Card } from './Card'
 
 export const Content = ({temp,prev,next,status,long}) => {
   return (
-    <div className='flex bg-base w-screen p-5 flex-col mb-10'>
+    <div className='flex bg-base w-screen p-5 flex-col mb-10 h-fit'>
 
         <div className='bg-white h-auto md:h-48 w-100 m-5 py-5 flex-col md:flex-row flex justify-between px-10'>
             <div className='flex-col'>
@@ -24,7 +24,7 @@ export const Content = ({temp,prev,next,status,long}) => {
             </div>
         </div>
 
-        <div className='bg-base h-full w-100 m-5 py-5 flex-col md:flex-row flex justify-between px-10 '>
+        <div className='bg-base h-fit w-100 m-5 flex-col md:flex-row flex md:justify-between '>
         
         {temp?.length !== 0 ?  
         temp.map((item,index) => (
@@ -34,13 +34,12 @@ export const Content = ({temp,prev,next,status,long}) => {
 
         </div>
 
-
-          <div className='flex flex-row self-center'>
-            <div className='flex flex-row hover:cursor-pointer hover:bg-white p-4' onClick={prev}>
+          <div className='flex flex-row self-center mt-5'>
+            <div className={`flex flex-row p-4 ${status !== 1 && `hover:cursor-pointer hover:bg-white `}`} onClick={prev}>
               <img className='h-8' src={status !== 1 ? leftOn : left} alt="left" />
               <h6 className={status !== 1 ? `text-prime font-semibold text-lg` : `text-second font-semibold text-lg`}>Previus Page </h6>
             </div>
-            <div className='flex flex-row hover:cursor-pointer hover:bg-white p-4' onClick={next}>
+            <div className={`flex flex-row p-4 ${status !== long && `hover:cursor-pointer hover:bg-white `}`} onClick={next}>
               <h6 className={status !== long ? `text-prime font-semibold text-lg` : `text-second font-semibold text-lg`}>Next Page </h6>
               <img className='h-8' src={status !== long ? rightOn : right}  alt="right" />
             </div>

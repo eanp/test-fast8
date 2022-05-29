@@ -3,7 +3,7 @@ import {more} from '../assets'
 
 export const Card = ({item,index}) => {
   return (
-    <div key={index+1} className='flex-col flex bg-white w-100 md:w-1/4 p-2 h-auto rounded-lg md:rounded-none mb-5 md:mb-0'>
+    <div key={index+1} className='flex-col flex bg-white w-100 md:w-1/5 p-2 h-max rounded-lg md:rounded-none mb-5 md:mb-0'>
       <div className='flex-row flex bg-white p-2 justify-between'>
       <div className='flex-row flex'>
           <h6 className='text-second font-medium text-lg mr-2 ml-3'>Personnel ID:</h6>

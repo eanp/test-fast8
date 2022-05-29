@@ -4,8 +4,8 @@ import {menu} from '../assets'
 
 export const Navbar = () => {
   return (
-    <div>
-        <div className='flex h-24 justify-between flex-row px-5'>
+    <div className='sticky top-0 md:flex bg-white'>
+        <div className='flex md:flex w-full h-24 justify-between flex-row px-5 '>
 
         <div className='flex flex-row items-center'>
           <img className='sm:h-24 visible sm:invisible flex items-center' src={menu} alt="menu" />
